@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spa Tận Nơi | Chăm Sóc Sắc Đẹp Tại Nhà</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <section class="slider-full">
+        <div class="slider-wrapper">
+          <img src="img/img_1.jpg" class="slide active" alt="spa image" />
+          <img src="img/img_2.jpg" class="slide" alt="facial image" />
+          <img src="img/img_3.jpg" class="slide" alt="relax image" />
+          <img src="img/img_4.jpg" class="slide" alt="relax image" />
+          <button class="slider-btn prev">&#10094;</button>
+          <button class="slider-btn next">&#10095;</button>
+        </div>
+      </section>
+      <div class="container">
+        <h1 style="color: black">Spa Tận Nơi – Trải Nghiệm 5 Sao Tại Nhà</h1>
+        <p>
+          Massage, chăm sóc da, gội đầu dưỡng sinh... phục vụ tận nơi chỉ trong
+          30 phút!
+        </p>
+        <a href="#booking" class="btn-primary">Đặt Lịch Ngay</a>
+      </div>
+    </header>
+
+    <section class="services container">
+      <h2>Dịch Vụ Nổi Bật</h2>
+      <ul>
+        <li>🌿 Massage thư giãn toàn thân</li>
+        <li>💆‍♀️ Chăm sóc da mặt chuyên sâu</li>
+        <li>🔥 Trị liệu đá nóng</li>
+        <li>🧖‍♀️ Gội đầu dưỡng sinh</li>
+      </ul>
+    </section>
+
+    <section class="why-us container">
+      <h2>Vì Sao Chọn Chúng Tôi?</h2>
+      <ul>
+        <li>⏱️ Đến trong vòng 30 phút</li>
+        <li>🎓 Chuyên viên có chứng chỉ</li>
+        <li>🌿 Sản phẩm thiên nhiên 100%</li>
+        <li>🏡 Dịch vụ 5 sao tại nhà</li>
+      </ul>
+    </section>
+
+    <section class="testimonials container">
+      <h2>Phản Hồi Khách Hàng</h2>
+      <blockquote>
+        “Lần đầu dùng dịch vụ spa tại nhà mà cực kỳ hài lòng!” – Chị Hoa, Hà Nội
+      </blockquote>
+      <blockquote>
+        “Tiện, sạch, chuyên nghiệp – không khác gì spa cao cấp.” – Anh Tuấn,
+        TP.HCM
+      </blockquote>
+    </section>
+
+    <section class="pricing container">
+      <h2>Bảng Giá</h2>
+      <table>
+        <tr>
+          <th>Dịch Vụ</th>
+          <th>Giá</th>
+        </tr>
+        <tr>
+          <td>Massage thư giãn 60'</td>
+          <td>400.000đ</td>
+        </tr>
+        <tr>
+          <td>Chăm sóc da mặt</td>
+          <td>350.000đ</td>
+        </tr>
+        <tr>
+          <td>Combo toàn thân</td>
+          <td>650.000đ</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="booking container" id="booking">
+      <h2>Đặt Lịch Ngay</h2>
+      <form id="bookingForm">
+        <input type="text" name="name" placeholder="Họ và tên" required />
+        <input type="tel" name="phone" placeholder="Số điện thoại" required />
+        <input type="text" name="address" placeholder="Địa chỉ" required />
+        <select name="service" required>
+          <option value="">Chọn dịch vụ</option>
+          <option>Massage thư giãn</option>
+          <option>Chăm sóc da mặt</option>
+          <option>Gội đầu dưỡng sinh</option>
+        </select>
+        <button type="submit">Xác Nhận Đặt Lịch</button>
+      </form>
+      <p id="formStatus"></p>
+    </section>
+
+    <footer class="container">
+      <p>&copy; 2025 Spa Tận Nơi | Hotline: 0909 999 888</p>
+    </footer>
+
+    <section class="qr-box container">
+      <h2>📱 Quét mã QR để đặt lịch nhanh</h2>
+      <div class="qr-content">
+        <img
+          src="https://chart.googleapis.com/chart?cht=qr&chs=250x250&chl=https://spatainha.vn/landing"
+          alt="QR Đặt Lịch"
+        />
+        <div class="qr-text">
+          <p>
+            Chỉ cần mở camera hoặc Zalo để quét mã QR và đặt lịch spa ngay trên
+            điện thoại của bạn.
+          </p>
+          <a href="https://spatainha.vn/landing" class="btn-primary"
+            >Hoặc bấm để mở trang</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <div id="qrcode"></div>
+    <script>
+      QRCode.toCanvas(
+        document.getElementById("qrcode"),
+        "https://spatainha.vn/landing",
+        function (error) {
+          if (error) console.error(error);
+        }
+      );
+    </script>
+  </body>
+</html>
